@@ -13,19 +13,19 @@ public class CoolCalculator {
     }
     public void subtract(){
         double difference = this.a-this.b;
-        System.out.println("The difference between " + this.a + "and " + this.b + difference);
+        System.out.println("The difference between " + this.a + " and " + this.b + difference);
     }
     public void multiply(){
         double product = this.a*this.b;
-        System.out.println("The product of "+this.a + "and " + this.b + " is " +product);
+        System.out.println("The product of "+this.a + " and " + this.b + " is " +product);
     }
     public void divide(){
         double quotient = this.a/this.b;
-        System.out.println("The quotient of "+ this.a + "divide by "+this.b+ " is " + quotient);
+        System.out.println("The quotient of "+ this.a + " divided by "+this.b+ " is " + quotient);
     }
     public void modulo(){
         double remainder = this.a%this.b;
-        System.out.println("The remainder of "+ this.a + "divided by "+this.b+ " is " + remainder);
+        System.out.println("The remainder of "+ this.a + " divided by "+this.b+ " is " + remainder);
     }
     public void isPrime(){
         boolean aStatus = true;
@@ -54,10 +54,10 @@ public class CoolCalculator {
             System.out.println("The number "+this.a+" is not prime");
         }
         if(bStatus==true){
-            System.out.println("The number"+this.b+"is prime");
+            System.out.println("The number "+this.b+" is prime");
         }
         else{
-            System.out.println("The number "+this.b+ "is not prime");
+            System.out.println("The number "+this.b+ " is not prime");
         }
     }
     public void Fibonacci(){
@@ -76,6 +76,15 @@ public class CoolCalculator {
         }
         System.out.println("The Fibonacci sequence is "+Arrays.toString(seq));
     }
+    public void all(){
+        this.add();
+        this.subtract();
+        this.multiply();
+        this.divide();
+        this.modulo();
+        this.isPrime();
+        this.Fibonacci();
+    }
     public static void main(String[] args){
         Scanner input = new Scanner(System.in);
         System.out.println("This program will let you do different operations with two numbers ");
@@ -85,8 +94,8 @@ public class CoolCalculator {
         double num2 = input.nextDouble();
         CoolCalculator myCalculator = new CoolCalculator(num1,num2);
         System.out.println("Enter the number that matches the operation you want to do ");
-        System.out.println("1. Addition \n 2. Subtraction \n 3.Multiplication 4. Division \n 5. Modulo \n +" +
-                "6. Prime Check \n 7. Fibonacci");
+        System.out.println("1. Addition \n 2. Subtraction \n 3.Multiplication 4. Division \n 5. Modulo \n " +
+                "6. Prime Check \n 7. Fibonacci \n 8. Run all operations");
         int choice = input.nextInt();
         System.out.println("Your numbers were " + myCalculator.a+ " and "+ myCalculator.b);
         if(choice==1||choice==2||choice==3||choice==4||choice==5||choice==6||choice==7||choice==8){
@@ -110,6 +119,9 @@ public class CoolCalculator {
             }
             else if(choice==7){
                 myCalculator.Fibonacci();
+            }
+            else if(choice==8){
+                myCalculator.all();
             }
         }
         else{
