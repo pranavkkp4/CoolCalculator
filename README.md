@@ -1,2 +1,2 @@
 # CoolCalculator
-A  calculator with some extra functionality. This program lets users enter 2 numbers, and do a variety of operations on them, including making a Fibonacci series and checking if they are prime
+A  calculator with some extra functionality. This program lets users enter 2 numbers, and then choose what functions to run on those numbers. The basic operations in this program are addition, subtraction, multiplication, division and modulo. Additionally, it also has functionality to check if the two numbers entered are prime, and to create a Fibonacci sequence starting with those two numbers.
