@@ -13,6 +13,9 @@ public class CoolCalculator {
     public double subtract(){
         return this.a-this.b;
     }
+    public double multiply(){
+        return this.a*this.b;
+    }
     public double divide(){
         return this.a/this.b;
     }
@@ -31,5 +34,22 @@ public class CoolCalculator {
         System.out.println("1. Addition \n 2. Subtraction \n 3.Multiplication 4. Division \n 5. Modulo");
         int choice = input.nextInt();
         System.out.println("Your numbers were " + myCalculator.a+ " and "+ myCalculator.b);
+        if(choice==1||choice==2||choice==3||choice==4||choice==5||choice==6||choice==7||choice==8){
+            if(choice==1){
+                System.out.println("The sum of your numbers is "+myCalculator.add());
+            }
+            else if(choice==2){
+                System.out.println("The difference of your numbers is "+myCalculator.subtract());
+            }
+            else if(choice==3){
+                System.out.println("The product of your numbers is "+myCalculator.multiply());
+            }
+            else if(choice==4){
+                System.out.println("The quotient of your numbers is "+myCalculator.divide());
+            }
+            else if(choice==5){
+                System.out.println("The remainder of your numbers is "+myCalculator.modulo());
+            }
+        }
     }
 }
